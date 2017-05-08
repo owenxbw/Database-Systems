@@ -1,2 +1,1 @@
-# CS143-Spring changed dir
-# CS143-Spring
+# CS143-Spring Database system
