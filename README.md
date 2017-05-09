@@ -1,1 +1,2 @@
-# CS143-Spring Database system
+# Database system programming for CS143-Spring 
+Projects include MySQL, PHP programming 
