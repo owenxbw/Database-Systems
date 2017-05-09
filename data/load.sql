@@ -1,0 +1,3 @@
+LOAD DATA LOCAL INFILE <dataFile> INTO TABLE <tableName>;
+ LOAD DATA LOCAL INFILE <dataFile> INTO TABLE <tableName> 
+     FIELDS TERMINATED BY ',';
