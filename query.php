@@ -8,12 +8,11 @@
 <h1><?php print "$title"; ?></h1>
 
 echo "Type an SQL query in the following box:"<br>
-echo "Example: SELECT * FROM Actor WHERE id=10;"
+echo "SELECT * FROM Movie WHERE id<10;"
 
 <?php
 if(isset($_POST['SubmitButton'])){
 	$input=$_POST['query'];   // stores query and transfer to MYSQL
-	echo "Success, You entered: ".$input;
 }
 
 ?>
@@ -33,7 +32,7 @@ if(isset($_POST['SubmitButton'])){
 //to MYSQL
 $db_connection = mysql_connect("localhost", "cs143", "");
 mysql_select_db("CS143", $db_connection);
-$query = "select * from Movie where id<10";	//inputs from user?
+$query = $_POST['query'];	//inputs from user?
 $rs = mysql_query($query, $db_connection);
 while($row = mysql_fetch_row($rs)) {	//retrieving results  
     $id = $row[0];

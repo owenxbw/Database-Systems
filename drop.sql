@@ -1,0 +1,2 @@
+DROP TABLE Movie;
+DROP TABLE Actor;
