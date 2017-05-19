@@ -32,7 +32,7 @@ if(isset($_POST['SubmitButton'])){
 //to MYSQL
 $db_connection = mysql_connect("localhost", "cs143", "");
 mysql_select_db("CS143", $db_connection);
-$query = $_POST['query'];	//inputs from user?
+$query = $_POST['query'];	//inputs from user?a
 $rs = mysql_query($query, $db_connection);
 while($row = mysql_fetch_row($rs)) {	//retrieving results  
     $id = $row[0];
@@ -41,7 +41,7 @@ while($row = mysql_fetch_row($rs)) {	//retrieving results
     $rating = $row[3];
     $company = $row[4];
     //$Description = $row[2];
-    print "$id, $title, $year, $rating, $company <br />";
+    print "$id, $title, $year, $rating, $company <br />";  //showing duplites if loading MYSQL multiple times
 }
 
 mysql_close($db_connection);
